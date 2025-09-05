@@ -1,9 +1,18 @@
+@font-face {
+  font-family: FigTree-Italic;
+  src: url("Assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: FigTree-Variable;
+  src: url("Assets/fonts/Figtree-VariableFont_wght.ttf");
+}
 * {
   box-sizing: border-box;
 }
 html {
   height: 100%;
   margin: 0;
+  font-size: clamp(10px, 16px, 3.6vw);
 }
 body {
   background-color: hsl(47, 88%, 63%);
@@ -18,7 +27,7 @@ main {
   border-radius: 10px;
   border: thin solid hsl(0, 0%, 7%);
   width: 325px;
-  max-width: 95%;
+  max-width: 90%;
   padding: 20px;
   box-shadow: 7px 7px hsl(0, 0%, 7%);
 }
@@ -29,17 +38,26 @@ p#status-update {
   width: fit-content;
   padding: 5px 8px;
   border-radius: 5px;
+  font-family: FigTree-Variable;
+}
+p#status-update + p {
+  font-family: FigTree-Variable;
 }
 img#hero {
   width: 100%;
   border-radius: 10px;
 }
-h2:hover {
-  color: hsl(47, 88%, 63%);
-  cursor: pointer;
+h2 {
+  font-family: FigTree-Variable;
+  font-weight: 800;
+  &:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+  }
 }
 h2 + p {
   color: hsl(0, 0%, 42%);
+  font-family: FigTree-Italic;
 }
 footer {
   display: flex;
@@ -50,5 +68,6 @@ footer {
   p {
     margin-left: 10px;
     font-weight: 800;
+    font-family: FigTree-Variable;
   }
 }
